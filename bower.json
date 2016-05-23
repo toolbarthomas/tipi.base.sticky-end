@@ -1,0 +1,16 @@
+{
+  "name": "tipi.base.sticky-end",
+  "homepage": "https://github.com/toolbarthomas/tipi.base.sticky-end",
+  "authors": [
+    "Thomas van der Velde <contact@toolbarthomas.net>"
+  ],
+  "description": "Horizontally align multiple elements",
+  "keywords": [
+    "toolbarthomas",
+    "modular",
+    "tipi",
+    "sticky-end"
+  ],
+  "license": "MIT",
+  "main": "_tipi.base.sticky-end.scss"
+}
