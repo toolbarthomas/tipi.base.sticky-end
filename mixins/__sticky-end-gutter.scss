@@ -1,0 +1,17 @@
+@mixin sticky-end-gutter(
+	$selector: null,
+	$vertical-gutter: false
+) {
+	@if $vertical-gutter != false {
+		.sticky-end {
+			&#{$selector} {
+				.sticky-end-body,
+				.sticky-end-footer {
+					&:before {
+						height: $vertical-gutter;
+					}
+				}
+			}
+		}
+	}
+}

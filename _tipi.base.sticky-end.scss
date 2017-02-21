@@ -1,3 +1,6 @@
+@import "mixins/__sticky-end-gutter";
+
+@import "__config";
 @import "__core";
 
 @include core_sticky-end;

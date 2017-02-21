@@ -12,13 +12,28 @@
 		line-height: normal;
 	}
 
-	.sticky-end-body,
-	.sticky-end-footer {
+	.sticky-end-footer,
+	.sticky-end-header {
 		display: table-row;
 		height: 1px;
+		line-height: normal;
+
+		@if $sticky-end-vertical-gutter != false {
+			&:before {
+				display: block;
+				content: " ";
+				overfow: hidden;
+				height: 0;
+			}
+		}
 	}
 
 	.sticky-end-body {
+		display: table-row;
 		height: 100%;
 	}
+
+	@include sticky-end-gutter(
+		$vertical-gutter: $sticky-end-vertical-gutter
+	);
 }
