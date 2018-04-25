@@ -17,20 +17,29 @@
 		display: table-row;
 		height: 1px;
 		line-height: normal;
-
-		@if $sticky-end-vertical-gutter != false {
-			&:before {
-				display: block;
-				content: " ";
-				overflow: hidden;
-				height: 0;
-			}
-		}
 	}
 
 	.sticky-end-body {
 		display: table-row;
 		height: 100%;
+	}
+
+	@if $sticky-end-vertical-gutter != false {
+		.sticky-end-body,
+		.sticky-end-footer {
+			&:before {
+				display: none;
+				content: " ";
+				overflow: hidden;
+				height: 0;
+			}
+
+			&:not(:first-child) {
+				&:before {
+					display: block;
+				}
+			}
+		}
 	}
 
 	@include sticky-end-gutter(
